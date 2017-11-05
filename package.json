@@ -1,0 +1,23 @@
+{
+  "name": "pga",
+  "version": "1.0.0",
+  "description": "web application to provide a programmers glossary and acronym definitions",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node scripts/start-client.js",
+    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "https://github.com/lmcneel/pga.git",
+  "author": "Tish McNeel, Camden Kirkland, Hamza Khan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "sequelize": "^4.22.5"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^3.0.0"
+  }
+}
