@@ -5,6 +5,6 @@ export function(){
 
 
 
-  })
-  return Imagetable
-}
+  });
+  return Imagetable;
+};

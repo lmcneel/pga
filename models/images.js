@@ -7,6 +7,6 @@ export function(){
     down_votes: DataTypes.INT,
     created_by: DataTypes.INT
 
-  })
-  return Image
-}
+  });
+  return Image;
+};

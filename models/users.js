@@ -4,6 +4,6 @@ export function(){
     display_name: DataTypes.TEXT,
     profile_url: DataTypes.TEXT,
     password: DataTypes.INT,
-  })
-  return User
-}
+  });
+  return User;
+};

@@ -4,6 +4,6 @@ export function(){
     default_language: DataTypes.INT,
     color_scheme_id: DataTypes.INT,
     timezone: DataTypes.TEXT,
-  })
-  return User_setting
-}
+  });
+  return User_setting;
+};

@@ -8,6 +8,6 @@ export function(){
     created_by: DataTypes.INT
 
 
-  })
-  return Term
-}
+  });
+  return Term;
+};

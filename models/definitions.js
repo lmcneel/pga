@@ -7,6 +7,6 @@ export function(){
     created_by: DataTypes.INT
 
 
-  })
-  return Definition
-}
+  });
+  return Definition;
+};

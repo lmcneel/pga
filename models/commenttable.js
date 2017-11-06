@@ -3,8 +3,8 @@ export function(){
     comment_id: DataTypes.INT,
     commenttable: DataTypes.STRING,
     commenttable_id: DataTypes.INT
-    
+
 
   });
   return Commenttable;
-}
+};

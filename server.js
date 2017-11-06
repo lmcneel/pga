@@ -1,7 +1,11 @@
 const express = require("express");
 const path = require("path");
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3001; //3001 because interacts with the other server
 const app = express();
+
+//import models
+//import controllers/routes
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

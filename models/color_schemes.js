@@ -3,6 +3,6 @@ export function(){
     name: DataTypes.STRING,
 
 
-  })
-  return Color_schemes 
-}
+  });
+  return Color_schemes;
+};

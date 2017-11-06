@@ -4,6 +4,6 @@ export function(){
     comment: DataTypes.TEXT,
 
 
-  })
-  return Comment
-}
+  });
+  return Comment;
+};

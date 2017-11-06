@@ -3,6 +3,6 @@ export function(){
     language: DataTypes.TEXT,
     description: DataTypes.TEXT,
     short_slug: DataTypes.TEXT
-  })
-  return Language
-}
+  });
+  return Language;
+};

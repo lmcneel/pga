@@ -9,6 +9,6 @@ export function(){
     created_by: DataTypes.INT
 
 
-  })
-  return Example
-}
+  });
+  return Example;
+};
