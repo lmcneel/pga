@@ -1,8 +1,8 @@
-export function(){
-  const Color_schemes = sequelize.define("Color_schemes", {
-    name: DataTypes.STRING,
 
-
+export default function(sequelize, DataTypes) {
+  const Color_scheme = sequelize.define("Color_scheme",{
+    name: DataTypes.STRING
   });
-  return Color_schemes;
+
+  return Color_scheme;
 };
