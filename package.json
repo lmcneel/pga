@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "description": "web application to provide a programmers glossary and acronym definitions",
   "main": "server.js",
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
   "scripts": {
+    "babel-node": "babel-node --presets=env",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
-    "start": "concurrently \"nodemon server.js\" \"npm run client\"",
+    "start": "concurrently \"nodemon --exec npm run babel-node -- ./server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +21,13 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.16.2",
+    "mysql2": "^1.4.2",
     "sequelize": "^4.22.5"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "nodemon": "^1.12.1",
     "sequelize-cli": "^3.0.0"
   }
 }
