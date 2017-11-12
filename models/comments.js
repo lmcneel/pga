@@ -1,4 +1,4 @@
-export default function() {
+export default function(sequelize, DataTypes) {
   const Comment = sequelize.define("Comment", {
     comment: DataTypes.TEXT,
   });
@@ -8,7 +8,7 @@ export default function() {
     // Term Comments
     Comment.belongsToMany(models.Term, {
       through: {
-        model: models.Commetable,
+        model: models.Commentable,
         unique:false,
         scope: {
           commentable: Comment
@@ -18,9 +18,9 @@ export default function() {
       constrainsts: false
     });
     // Definition Comments
-    Comment.belongsToMany(models.Defintion, {
+    Comment.belongsToMany(models.Definition, {
       through: {
-        model: models.Commetable,
+        model: models.Commentable,
         unique:false,
         scope: {
           commentable: Comment
@@ -44,7 +44,7 @@ export default function() {
     // User Favorite's Comments
     Comment.belongsToMany(models.User, {
       through: {
-        model: models.Favoritable,
+        model: models.Favoriteable,
         unique:false,
         scope: {
           commentable: Comment

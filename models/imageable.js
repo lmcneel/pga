@@ -3,9 +3,9 @@ export default function(sequelize, DataTypes){
     image_id: {
       type: DataTypes.INTEGER,
       unique: 'imageable_image_id'
-    }
+    },
     imageable: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       unique: 'imageable_image_id'
     },
     imageable_id: {

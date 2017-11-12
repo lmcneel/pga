@@ -1,9 +1,13 @@
-export function(){
+export default function(sequelize, DataTypes){
   const User_setting = sequelize.define("User_setting", {
-    user_id: DataTypes.INT,
-    default_language: DataTypes.INT,
-    color_scheme_id: DataTypes.INT,
-    timezone: DataTypes.TEXT,
+    timezone: DataTypes.TEXT
   });
+
+  User_setting.associate = (models) => {
+    User_setting.belongsTo(models.User);
+    User_setting.belongsTo(models.Language, {as: 'default_language'});
+    User_setting.belongsTo(models.Color_scheme);
+  }
+
   return User_setting;
 };

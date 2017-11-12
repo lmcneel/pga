@@ -4,5 +4,8 @@ export default function(sequelize, DataTypes) {
     name: DataTypes.STRING
   });
 
+  Color_scheme.associate = (models) => {
+    Color_scheme.hasOne(models.User_setting);
+  };
   return Color_scheme;
 };

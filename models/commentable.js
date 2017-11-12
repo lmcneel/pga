@@ -5,7 +5,7 @@ export default function(sequelize, DataTypes){
       unique: 'commentable_comment_id'
     },
     commentable: {
-      type: DataTypes:STRING,
+      type: DataTypes.STRING,
       unique: 'commentable_comment_id'
     },
     commentable_id:{ 
@@ -14,5 +14,5 @@ export default function(sequelize, DataTypes){
       references: null
     }
   });
-  return Commenttable;
+  return Commentable;
 };

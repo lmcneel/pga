@@ -8,6 +8,7 @@ export default function(sequelize, DataTypes){
   Definition.associate = (models) => {
     Definition.belongsTo(models.User, {as: 'created_by'});
     Definition.belongsTo(models.Term);
+    Definition.belongsTo(models.Language);
     Definition.hasMany(models.Example);
     Definition.belongsToMany(models.Comment, {
       through: {
@@ -22,22 +23,24 @@ export default function(sequelize, DataTypes){
     }); // Close Comment Belongs To Many
     Definition.belongsToMany(models.Image, {
       through: {
-        model: models.Imagable,
+        model: models.Imageable,
         unique: false,
         scope: {
           imageable: Definition
         },
-        foreignKey: 'imagable_id',
+        foreignKey: 'imageable_id',
         constrainsts: false
       }
     }); //Close Image Belongs To Many
     Definition.belongsToMany(models.User, {
-      through: models.Favoritable,
-      unique: false,
-      scope: {
-        favoritable: Definition
+      through: {
+        model: models.Favoriteable,
+        unique: false,
+        scope: {
+          favoritable: Definition
+        },
       },
-      foreignKey: 'favoritable_id',
+      foreignKey: 'favoriteable_id',
       constraints: false
     }); //Close User belongs to many
   }
